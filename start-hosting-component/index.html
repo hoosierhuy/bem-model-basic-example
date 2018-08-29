@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>uHost Signup</title>
     <link rel="shortcut icon" href="../favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="start-hosting.css">
 </head>
@@ -28,10 +27,10 @@
         <nav class="main-nav">
             <ul class="main-nav__items">
                 <li class="main-nav__item">
-                    <a href="../packages.component/index.html">Packages</a>
+                    <a href="../packages-component/index.html">Packages</a>
                 </li>
                 <li class="main-nav__item">
-                    <a href="../customers.component/index.html">Customers</a>
+                    <a href="../customers-component/index.html">Customers</a>
                 </li>
                 <li class="main-nav__item main-nav__item--cta">
                     <a href="index.html">Start Hosting</a>
@@ -42,10 +41,10 @@
     <nav class="mobile-nav">
         <ul class="mobile-nav__items">
             <li class="mobile-nav__item">
-                <a href="../packages.component/index.html">Packages</a>
+                <a href="../packages-component/index.html">Packages</a>
             </li>
             <li class="mobile-nav__item">
-                <a href="../customers.component/index.html">Customers</a>
+                <a href="../customers-component/index.html">Customers</a>
             </li>
             <li class="mobile-nav__item mobile-nav__item--cta">
                 <a href="index.html">Start Hosting</a>
@@ -61,27 +60,27 @@
                 <option value="ms">Ms.</option>
             </select>
             <label for="first-name">First name</label>
-            <input type="text" id="first-name">
+            <input type="text" id="first-name" required>
             <label for="last-name">Last name</label>
-            <input type="text" id="last-name">
+            <input type="text" id="last-name" required>
             <label for="email">E-Mail</label>
-            <input type="email" id="email">
+            <input type="email" id="email" required>
             <label for="password">Password</label>
-            <input type="password" id="password">
-            <input type="checkbox" id="agree-terms">
+            <input type="password" id="password" required>
+            <input type="checkbox" id="agree-terms" required>
             <label for="agree-terms">Agree to
                 <a href="#">Terms &amp; Conditions</a>
             </label>
-            <button type="submit" class="button">Sign Up</button>
+            <button type="submit" class="button" disabled>Sign Up</button>
         </form>
     </main>
     <footer class="main-footer">
         <nav>
-            <ul>
-                <li>
+            <ul class="main-footer__links">
+                <li class="main-footer__link">
                     <a href="#">Support</a>
                 </li>
-                <li>
+                <li class="main-footer__link">
                     <a href="#">Terms of Use</a>
                 </li>
             </ul>
