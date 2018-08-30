@@ -1,0 +1,25 @@
+{
+  "name": "bem-model-basic-example",
+  "version": "1.0.0",
+  "description": "http://getbem.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoosierhuy/bem-model-basic-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoosierhuy/bem-model-basic-example/issues"
+  },
+  "homepage": "https://github.com/hoosierhuy/bem-model-basic-example#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "install": "^0.12.1"
+  }
+}

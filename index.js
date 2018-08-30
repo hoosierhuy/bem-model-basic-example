@@ -29,5 +29,3 @@ toggleButton.addEventListener('click', () => {
     mobileNav.classList.toggle('open');
     backDrop.classList.toggle('open');
 });
-
-console.dir(backDrop)
