@@ -7,14 +7,23 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
+    display: grid;
+    grid-template-rows: 3.5rem auto fit-content(8rem);
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+    height: 100%;
 }
 
 main {
-    min-height: calc(100vh - 3.5rem - 8rem);
-    margin-top: 3.5rem;
+    grid-area: main;
 }
 
 .backdrop {
@@ -131,9 +140,10 @@ main {
 }
 
 .main-footer {
-    background: black;
+    background: #000;
     padding: 2rem;
     margin-top: 3rem;
+    grid-area: footer;
 }
 
 .main-footer__links {
