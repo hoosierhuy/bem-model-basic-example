@@ -4,6 +4,7 @@ const modalNoButton = document.querySelector('.modal__action--negative');
 const selectPlanButtons = document.querySelectorAll('.plan button');
 const toggleButton = document.querySelector('.toggle-button');
 const mobileNav = document.querySelector('.mobile-nav');
+const ctaButton = document.querySelector('.main-nav__item--cta');
 
 function closeModal() {
     (modal) ? modal.classList.remove('open') : null;
@@ -29,3 +30,4 @@ toggleButton.addEventListener('click', () => {
     mobileNav.classList.toggle('open');
     backDrop.classList.toggle('open');
 });
+

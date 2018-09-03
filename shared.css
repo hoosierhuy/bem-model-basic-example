@@ -3,6 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+/** Selects entire document */
+:root {
+    /** Color variables */
+    --old-school-forest-green: #0e4f1f;
+    --scarlet-red: #ff1b68;
+    --jello-lime: #2ddf5c;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -42,7 +50,7 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    background: #2ddf5c;
+    background: var(--jello-lime);
     padding: 0.5rem 1rem;
     z-index: 1;
     display: flex;
@@ -73,7 +81,7 @@ main {
 }
 
 .main-header__brand {
-    color: #0e4f1f;
+    color: var(--old-school-forest-green); /** Syntax can also be:  "var(--old-school-forest-green, #0e4f1f)" with the second argument as fallback */
     text-decoration: none;
     font-weight: bold;
 }
@@ -101,7 +109,7 @@ main {
 .main-nav__item a,
 .mobile-nav__item a {
     text-decoration: none;
-    color: #0e4f1f;
+    color: var(--old-school-forest-green);
     font-weight: bold;
     padding: 0.2rem 0;
 }
@@ -112,10 +120,14 @@ main {
     border-bottom: 5px solid white;
 }
 
+.main-nav__item--cta {
+    animation: wiggle 200ms 4s 8;
+}
+
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
     color: white;
-    background: #ff1b68;
+    background: var(--scarlet-red);
     padding: 0.5rem 1rem;
     border-radius: 8px;
 }
@@ -124,7 +136,7 @@ main {
 .main-nav__item--cta a:active,
 .mobile-nav__item--cta a:hover,
 .mobile-nav__item--cta a:active {
-    color: #ff1b68;
+    color: var(--scarlet-red);
     background: white;
     border: none;
 }
@@ -201,10 +213,10 @@ main {
 }
 
 .button {
-    background: #0e4f1f;
+    background: var(--old-school-forest-green);
     color: white;
     font: inherit;
-    border: 1.5px solid #0e4f1f;
+    border: 1.5px solid var(--old-school-forest-green);
     padding: 0.5rem;
     border-radius: 8px;
     font-weight: bold;
@@ -214,7 +226,7 @@ main {
 .button:hover,
 .button:active {
     background: white;
-    color: #0e4f1f;
+    color: var(--old-school-forest-green);
 }
 
 .button:focus {
@@ -229,7 +241,10 @@ main {
 }
 
 .open {
+    /** Using important here is okay because I want to override everything else when the modal is rendered */
     display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 @media (min-width: 40rem) {
@@ -240,5 +255,18 @@ main {
     .main-footer__links {
         flex-direction: row;
         justify-content: center;
+    }
+}
+
+/** Animation */
+@keyframes wiggle {
+    0% {
+        transform: rotateZ(0);
+    }
+    50% {
+        transform: rotateZ(-10deg);
+    }
+    100% {
+        transform: rotateZ(10deg);
     }
 }

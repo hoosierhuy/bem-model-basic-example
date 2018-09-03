@@ -51,7 +51,7 @@ main {
 .signup-form select:focus {
     outline: none;
     background: #d8f3df;
-    border-color: #2ddf5c;
+    border-color: var(--jello-lime);
 }
 
 .signup-form input[type="checkbox"] {
@@ -65,14 +65,14 @@ main {
 }
 
 .signup-form input[type="checkbox"]:checked {
-    background: #2ddf5c;
-    border: #0e4f1f;
+    background: var(--jello-lime);
+    border: var(--old-school-forest-green);
 }
 
 .signup-form input.invalid,
 .signup-form select.invalid,
 .signup-form :invalid {
-    border-color: #ff1b68 !important;
+    border-color: var(--scarlet-red) !important;
     background: #faacac;
 }
 

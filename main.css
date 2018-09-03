@@ -1,5 +1,5 @@
 #product-overview {
-    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url('images/freedom.jpg') left center/cover no-repeat border-box, #ff1b68;
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url('images/freedom.jpg') left center/cover no-repeat border-box, var(--scarlet-red);
     width: 100vw;
     height: 33vh;
     position: relative;
@@ -26,7 +26,7 @@
 }
 
 .section-title {
-    color: #2ddf5c;
+    color: var(--jello-lime);
     text-align: center;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .plan__title {
-    color: #0e4f1f;
+    color: var(--old-school-forest-green);
 }
 
 .plan__price {
@@ -64,7 +64,7 @@
 }
 
 .plan--highlighted .plan__price {
-    color: #0e4f1f;
+    color: var(--old-school-forest-green);
 }
 
 .plan__features {
@@ -97,7 +97,7 @@
 }
 
 #key-features {
-    background: #ff1b68;
+    background: var(--scarlet-red);
     margin-top: 5rem;
     padding: 1rem;
 }
@@ -142,7 +142,9 @@
 
 .modal {
     position: fixed;
-    display: none;
+    opacity: 0;
+    transform: translateY(-3rem); /** slide down from above */
+    transition: opacity 200ms ease-out, transform 500ms ease-out;
     z-index: 200;
     top: 20%;
     left: 30%;
@@ -163,8 +165,8 @@
 }
 
 .modal__action {
-    border: 1px solid #0e4f1f;
-    background: #0e4f1f;
+    border: 1px solid var(--old-school-forest-green);
+    background: var(--old-school-forest-green);
     text-decoration: none;
     color: white;
     font: inherit;
@@ -174,8 +176,8 @@
 
 .modal__action:hover,
 .modal__action:active {
-    background: #2ddf5c;
-    border-color: #2ddf5c;
+    background: var(--jello-lime);
+    border-color: var(--jello-lime);
 }
 
 .modal__action--negative {
