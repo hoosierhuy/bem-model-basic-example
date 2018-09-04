@@ -13,6 +13,13 @@ main {
     display: grid;
     grid-auto-rows: 2rem;
     grid-row-gap: 0.5rem;
+
+    @media (min-width: 40rem) {
+        margin: auto;
+        width: 30rem;
+        grid-template-columns: 10rem auto;
+        grid-gap: 0.5rem 1rem;
+    }
 }
 
 .signup-form label {
@@ -81,13 +88,6 @@ main {
 }
 
 @media (min-width: 40rem) {
-    .signup-form {
-        margin: auto;
-        width: 30rem;
-        grid-template-columns: 10rem auto;
-        grid-gap: 0.5rem 1rem;
-    }
-
     #title {
         grid-column: span 2;
     }
